@@ -137,27 +137,42 @@ export default function Portfolio() {
         />
         <div className="absolute inset-0 bg-figma-subtle opacity-[0.42]" />
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center px-4">
+          {/* 1. Tên môn học (Eyebrow text) */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-[clamp(14px,1.5vw,24px)] font-medium text-[#FFFFFF]/80 mb-2 tracking-widest uppercase"
+            className="text-[clamp(12px,1.5vw,20px)] font-semibold text-secondary mb-4 tracking-[0.15em] uppercase"
           >
             Nhập môn Công nghệ số và Ứng dụng Trí tuệ Nhân tạo
           </motion.p>
+
+          {/* 2. Tên sinh viên (Tiêu đề chính) */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="text-[clamp(40px,7vw,120px)] font-extrabold text-[#FFFFFF] leading-[1.1] mb-6"
+          >
+            Phạm Hoàng Mai
+          </motion.p>
+
+          {/* 3. Mã số sinh viên */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-[clamp(36px,6vw,120px)] font-extrabold text-[#FFFFFF] leading-none"
+            className="text-[clamp(16px,1.8vw,26px)] font-medium text-[#FFFFFF] mb-2 tracking-wide"
           >
-            Phạm Hoàng Mai
+            MSSV: 25040857
           </motion.p>
+
+          {/* 4. Ngành học & Trường */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
-            className="text-[clamp(14px,1.5vw,26px)] font-light text-secondary mt-4"
+            transition={{ delay: 0.8, duration: 0.8 }}
+            className="text-[clamp(16px,1.8vw,26px)] font-light text-[#FFFFFF]/70"
           >
             Sinh viên Ngôn ngữ Anh · ULIS-VNU
           </motion.p>
@@ -191,15 +206,15 @@ export default function Portfolio() {
               </p>
               <p className="text-[clamp(16px,1.3vw,22px)] font-normal leading-[1.7] text-primary">
                 Tôi là <strong>Phạm Hoàng Mai</strong>, sinh viên ngành{" "}
-                <strong>Ngôn ngữ Anh</strong>, ULIS-VNU. Bên cạnh niềm đam mê với ngôn ngữ, tôi thường dành thời gian cho những sở
-                thích cá nhân như đọc sách, nghe nhạc và nấu ăn để cân bằng cuộc
-                sống. Đối với tôi, mỗi ngày trôi
-                qua đều là một cơ hội tuyệt vời để học hỏi, trải nghiệm và không
-                ngừng hoàn thiện bản thân.</p>
+                <strong>Ngôn ngữ Anh</strong>, ULIS-VNU. Bên cạnh niềm đam mê
+                với ngôn ngữ, tôi thường dành thời gian cho những sở thích cá
+                nhân như đọc sách, nghe nhạc và nấu ăn để cân bằng cuộc sống.
+                Đối với tôi, mỗi ngày trôi qua đều là một cơ hội tuyệt vời để
+                học hỏi, trải nghiệm và không ngừng hoàn thiện bản thân.
+              </p>
               <p className="text-[clamp(16px,1.3vw,22px)] font-normal leading-[1.7] text-primary">
-                
-                <strong>Câu châm ngôn sống yêu thích:</strong> "Trong kỷ nguyên số, ngôn ngữ là cầu nối, còn công nghệ là đôi cánh."
-                
+                <strong>Câu châm ngôn sống yêu thích:</strong> "Trong kỷ nguyên
+                số, ngôn ngữ là cầu nối, còn công nghệ là đôi cánh."
               </p>
               <p className="text-[clamp(16px,1.3vw,22px)] font-normal leading-[1.7] text-primary">
                 Sở thích của tôi bao gồm:
@@ -210,7 +225,6 @@ export default function Portfolio() {
                   "Xem phim và nghe nhạc để giải trí, đồng thời rèn luyện phản xạ nghe tiếng Anh tự nhiên.",
                   "Đọc sách lúc rảnh rỗi để thư giãn đầu óc.",
                   "Chụp ảnh, ghi lại những khoảnh khắc đẹp thường ngày, phong cảnh đường phố hoặc đồ ăn, rồi tự tay chỉnh sửa màu sắc bằng các ứng dụng trên điện thoại.",
-                 
                 ].map((item, i) => (
                   <div key={i} className="flex flex-row items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 shrink-0" />
@@ -220,8 +234,6 @@ export default function Portfolio() {
                   </div>
                 ))}
               </div>
-
-
             </motion.div>
 
             <motion.div
@@ -280,9 +292,8 @@ export default function Portfolio() {
               <div className="flex flex-col gap-3">
                 {[
                   "Minh chứng năng lực số: Thể hiện trực quan các kỹ năng công nghệ thông tin đã được đào tạo và áp dụng thực tế qua từng bài tập của học phần.",
-                  "Kho lưu trữ sản phẩm số cá nhân: Đóng vai trò là một \"thư viện thu nhỏ\", lưu trữ an toàn toàn bộ sản phẩm dịch thuật, slide thuyết trình, và báo cáo nghiên cứu dưới định dạng số hóa để dễ dàng truy cập mọi lúc, mọi nơi.",
+                  'Kho lưu trữ sản phẩm số cá nhân: Đóng vai trò là một "thư viện thu nhỏ", lưu trữ an toàn toàn bộ sản phẩm dịch thuật, slide thuyết trình, và báo cáo nghiên cứu dưới định dạng số hóa để dễ dàng truy cập mọi lúc, mọi nơi.',
                   "Công cụ định vị thương hiệu cá nhân: Sẵn sàng chia sẻ đường link portfolio trực tiếp tới các nhà tuyển dụng, đối tác hoặc giảng viên để chứng minh năng lực thực tế một cách chuyên nghiệp nhất.",
-                 
                 ].map((item, i) => (
                   <div key={i} className="flex flex-row items-start gap-3">
                     <div className="w-2 h-2 bg-secondary rounded-full mt-2 shrink-0" />
@@ -375,24 +386,22 @@ export default function Portfolio() {
                 <p className="text-[clamp(20px,2.08vw,36px)] font-extrabold leading-[1.2] text-primary">
                   Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo
                 </p>
-                
-                <div className="flex flex-col gap-3">
-                {[
-                  "Kỹ năng Ứng dụng Trí tuệ Nhân tạo (AI Literacy): Có tư duy phản biện khi sử dụng AI, biết cách tinh chỉnh Prompt để AI hỗ trợ tra cứu thuật ngữ chuyên ngành hẹp mà không bị phụ thuộc hoàn toàn.",
-                  "Kỹ năng Hợp tác Trực tuyến: Sử dụng tốt các công cụ làm việc nhóm thời gian thực (Google Workspace, Trello, Slack), hiểu rõ quy chuẩn phân chia công việc trong một dự án dịch thuật lớn.",
-                  "Kỹ năng Sáng tạo Nội dung Đa phương tiện: Thiết kế các ấn phẩm infographic học tập rõ ràng, phối màu chuẩn thẩm mỹ trên Canva và biên tập video bài giảng ngắn có phụ đề.",
-                  "Kỹ năng Thực thi Liêm chính Học thuật: Nắm vững luật bản quyền số, thành thạo kỹ thuật trích dẫn nguồn tài liệu tham khảo theo chuẩn quốc tế (APA 7, MLA), kiên quyết chống đạo văn học thuật.",
-                 
-                ].map((item, i) => (
-                  <div key={i} className="flex flex-row items-start gap-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 shrink-0" />
-                    <p className="text-[clamp(16px,1.5vw,26px)] font-normal leading-[1.6] text-primary">
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
+                <div className="flex flex-col gap-3">
+                  {[
+                    "Kỹ năng Ứng dụng Trí tuệ Nhân tạo (AI Literacy): Có tư duy phản biện khi sử dụng AI, biết cách tinh chỉnh Prompt để AI hỗ trợ tra cứu thuật ngữ chuyên ngành hẹp mà không bị phụ thuộc hoàn toàn.",
+                    "Kỹ năng Hợp tác Trực tuyến: Sử dụng tốt các công cụ làm việc nhóm thời gian thực (Google Workspace, Trello, Slack), hiểu rõ quy chuẩn phân chia công việc trong một dự án dịch thuật lớn.",
+                    "Kỹ năng Sáng tạo Nội dung Đa phương tiện: Thiết kế các ấn phẩm infographic học tập rõ ràng, phối màu chuẩn thẩm mỹ trên Canva và biên tập video bài giảng ngắn có phụ đề.",
+                    "Kỹ năng Thực thi Liêm chính Học thuật: Nắm vững luật bản quyền số, thành thạo kỹ thuật trích dẫn nguồn tài liệu tham khảo theo chuẩn quốc tế (APA 7, MLA), kiên quyết chống đạo văn học thuật.",
+                  ].map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3">
+                      <div className="w-2 h-2 bg-secondary rounded-full mt-2 shrink-0" />
+                      <p className="text-[clamp(16px,1.5vw,26px)] font-normal leading-[1.6] text-primary">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
@@ -688,10 +697,17 @@ export default function Portfolio() {
               💭 Trải nghiệm & cảm nhận
             </p>
             <p className="text-[clamp(16px,1.4vw,24px)] font-normal leading-[1.8] text-primary/90">
-              Hành trình tự tay thiết lập và số hóa toàn bộ các bài tập thực hành vào Portfolio trực tuyến mang lại cho tôi niềm vui sáng tạo vô cùng lớn. Nó giúp tôi nhận ra việc ứng dụng CNTT không hề khô khan mà cực kỳ thú vị khi mình áp dụng đúng vào ngành học Ngôn ngữ Anh của mình.
+              Hành trình tự tay thiết lập và số hóa toàn bộ các bài tập thực
+              hành vào Portfolio trực tuyến mang lại cho tôi niềm vui sáng tạo
+              vô cùng lớn. Nó giúp tôi nhận ra việc ứng dụng CNTT không hề khô
+              khan mà cực kỳ thú vị khi mình áp dụng đúng vào ngành học Ngôn ngữ
+              Anh của mình.
             </p>
             <p className="text-[clamp(16px,1.4vw,24px)] font-normal leading-[1.8] text-primary/90">
-              Tôi cảm thấy tự tin hơn rất nhiều khi giờ đây có thể tự hào gửi một đường link trang web chuyên nghiệp chứa tất cả các sản phẩm chất lượng nhất của bản thân tới thầy cô và các nhà tuyển dụng tiềm năng trong tương lai.
+              Tôi cảm thấy tự tin hơn rất nhiều khi giờ đây có thể tự hào gửi
+              một đường link trang web chuyên nghiệp chứa tất cả các sản phẩm
+              chất lượng nhất của bản thân tới thầy cô và các nhà tuyển dụng
+              tiềm năng trong tương lai.
             </p>
           </motion.div>
 
@@ -711,7 +727,6 @@ export default function Portfolio() {
                 "Sự linh hoạt trong xử lý dữ liệu: Không còn sợ hãi trước những bảng số liệu thô hay thuật ngữ lộn xộn nhờ kỹ năng Excel và phân loại lưu trữ đám mây.",
                 "Tư duy làm chủ công nghệ: Coi AI là một người trợ lý đắc lực hỗ trợ gợi ý ý tưởng dịch thuật chứ không lạm dụng để đánh mất tư duy ngôn ngữ cá nhân.",
                 "Ý thức trách nhiệm học thuật: Hiểu rằng mỗi bài viết hay bản dịch trực tuyến đều cần tôn trọng chất xám của tác giả gốc bằng việc trích dẫn nguồn rõ ràng và văn minh.",
-                
               ].map((item, i) => (
                 <div key={i} className="flex flex-row items-start gap-3">
                   <span className="text-secondary font-bold shrink-0">✓</span>
@@ -777,13 +792,28 @@ export default function Portfolio() {
               {[
                 {
                   emoji: "⏰",
-                  text: <><strong>Thách thức: </strong>Cân bằng thời gian nghiên cứu giữa các bài tập có tính chuyên môn sâu về lý thuyết (như Trí tuệ nhân tạo và Liêm chính học thuật) với việc học kỹ thuật thiết kế, căn chỉnh bố cục trang web sao cho đẹp mắt trên cả thiết bị di động.</>,
+                  text: (
+                    <>
+                      <strong>Thách thức: </strong>Cân bằng thời gian nghiên cứu
+                      giữa các bài tập có tính chuyên môn sâu về lý thuyết (như
+                      Trí tuệ nhân tạo và Liêm chính học thuật) với việc học kỹ
+                      thuật thiết kế, căn chỉnh bố cục trang web sao cho đẹp mắt
+                      trên cả thiết bị di động.
+                    </>
+                  ),
                 },
                 {
                   emoji: "🌐",
-                  text: <><strong>Cách vượt qua:</strong>Áp dụng triệt để sơ đồ tư duy phân chia công việc theo từng tuần, tích cực tham khảo các mẫu thiết kế hiện đại trên mạng và không ngần ngại hỏi ý kiến phản hồi từ bạn bè cùng giảng viên để chỉnh sửa hoàn thiện sản phẩm từng ngày.</>,
+                  text: (
+                    <>
+                      <strong>Cách vượt qua:</strong>Áp dụng triệt để sơ đồ tư
+                      duy phân chia công việc theo từng tuần, tích cực tham khảo
+                      các mẫu thiết kế hiện đại trên mạng và không ngần ngại hỏi
+                      ý kiến phản hồi từ bạn bè cùng giảng viên để chỉnh sửa
+                      hoàn thiện sản phẩm từng ngày.
+                    </>
+                  ),
                 },
-                
               ].map((item, i) => (
                 <div
                   key={i}
@@ -880,12 +910,12 @@ export default function Portfolio() {
               </p>
               <a
                 href="mailto:linhhuyenvu3082007@gmail.com"
-                className="text-[clamp(16px,1.8vw,32px)] font-normal hover:text-secondary transition-colors break-all"
+                className="text-[clamp(14px,1.5vw,24px)] font-normal hover:text-secondary transition-colors break-all"
               >
-                linhhuyenvu3082007@gmail.com
+                hoangmaita345@gmail.com
               </a>
               <p className="text-[clamp(14px,1.5vw,24px)] font-normal text-[#0D2B45]/80">
-                0389248843
+                0911651333
               </p>
             </div>
 
