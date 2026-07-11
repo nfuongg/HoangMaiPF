@@ -1,0 +1,162 @@
+/* Google Fonts imports */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300..600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 
+       BỘ MÀU MỚI – TỐI ƯU TƯƠNG PHẢN
+       Nền:        #E6F4FA → hsl(0, 0%, 100%)
+       Nhấn:       #1EC1FE → hsl(196, 99%, 56%)
+       Chủ đạo:    #0D2B45 → hsl(210, 69%, 16%)   (xanh đậm, thay #1A3A5C để tăng contrast)
+       Phụ:        #E6F4FA → hsl(200, 60%, 94%)   (xanh rất nhạt, thay #E5F2FA)
+    */
+
+    /* Nền tổng thể – trắng */
+    --background: 0 0% 100%;
+
+    /* Màu chữ chính – xanh đậm (đọc trên nền trắng rất rõ) */
+    --foreground: 210 69% 16%;
+
+    /* Card / Popover – nền trắng, chữ xanh đậm */
+    --card: 0 0% 100%;
+    --card-foreground: 210 69% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 69% 16%;
+
+    /* Màu chủ đạo (xanh đậm) – dùng cho header, footer, tiêu đề chính */
+    --primary: 210 69% 16%;
+    --primary-foreground: 0 0% 100%;   /* chữ trắng trên nền xanh đậm */
+
+    /* Màu nhấn (xanh cyan sáng) – dùng cho nút, link, hover, badge */
+    --secondary: 196 99% 56%;
+    --secondary-foreground: 0 0% 100%; /* chữ trắng trên nền nhấn */
+
+    /* Màu phụ (xanh rất nhạt) – dùng cho background các section riêng */
+    --muted: 200 60% 94%;
+    --muted-foreground: 210 69% 16%;   /* chữ xanh đậm trên nền sáng, tương phản tốt */
+
+    /* Màu accent (có thể dùng thêm) – giữ trắng hoặc xanh nhạt */
+    --accent: 200 60% 94%;
+    --accent-foreground: 210 69% 16%;
+
+    /* Màu báo lỗi – giữ nguyên */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Viền, input, ring – dùng tông xanh nhạt hoặc nhấn */
+    --border: 200 60% 85%;
+    --input: 200 60% 85%;
+    --ring: 196 99% 56%;              /* focus ring dùng màu nhấn */
+
+    /* Chart colors – giữ nguyên */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar – điều chỉnh nhẹ để đồng bộ */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 69% 16%;
+    --sidebar-primary: 210 69% 16%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 200 60% 94%;
+    --sidebar-accent-foreground: 210 69% 16%;
+    --sidebar-border: 200 60% 85%;
+    --sidebar-ring: 196 99% 56%;
+
+    /* Overflow Figma tokens */
+    --figma-surface: 200 60% 94%;
+    --figma-highlight: 196 99% 56%;
+    --figma-subtle: 210 69% 16%;
+    --figma-color-9: 0 0% 95%;
+    --figma-color-10: 0 0% 23%;
+    --figma-color-11: 0 100% 56%;
+    --figma-text-1: 210 69% 16%;
+  }
+
+  /* Dark mode – nếu dùng, giữ tương phản cao */
+  .dark {
+    --background: 210 69% 8%;          /* nền tối hơn */
+    --foreground: 0 0% 100%;
+
+    --card: 210 69% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 210 69% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 196 99% 56%;            /* nhấn làm chủ đạo trong dark */
+    --primary-foreground: 210 69% 8%;
+
+    --secondary: 210 69% 16%;          /* chủ đạo làm secondary */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 60% 20%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: 200 60% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 200 60% 25%;
+    --input: 200 60% 25%;
+    --ring: 196 99% 56%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 210 69% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 196 99% 56%;
+    --sidebar-primary-foreground: 210 69% 8%;
+    --sidebar-accent: 200 60% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 200 60% 25%;
+    --sidebar-ring: 196 99% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    @apply bg-background text-foreground;
+    
+    font-family: 'JetBrains Mono', sans-serif;
+  }
+
+  img, video, svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
